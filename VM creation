@@ -1,1 +1,11 @@
+Login to AWS account
+
+Select an EC2 instance
+Give instance same
+Selection OS flaver and Size
+Create an SSH key pair or use existing one
+Select VPC-subnet-Public Ip
+Select security group
+
+Launch instance.
 
