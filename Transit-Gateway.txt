@@ -1,0 +1,43 @@
+Transit-Gateway
+Transit gateways are used to communicate among multiple VPCs, Instead of doing VPC Peering.
+VPC peering is point to point to point , it will get complex for each connection.
+
+
+1.Create VPC-01—10.0.0.0/16
+      Create Subnet-10.0.1.0/24
+      Create an internet gateway and attach toVPC01 
+     Allow the communication to VPC in Route table -using internet gateway
+     Allow all traffic in Security group
+Create a VM in this VPC
+
+
+2. Create VPC-02—172.16.0.0/16
+  Create Subnet-172.16.1.0/24
+ Create an internet gateway and attach toVPC02
+ Allow the communication to VPC in Route table -using internet gateway
+Allow all traffic in Security group
+Create a VM in this VPC
+
+Before creating transit gateway-Tty to ping servers-
+NO COMMUNICATION.
+
+  	 
+Now Seclet transit gateway -Create
+Transitgateway-01
+Now Select-Transitgatewayattachements- Select VPC01-attach to transitgateway1
+Add the route in Route-table
+  from   172.16.0.0/16 to Transitgaatway-Select-connection
+
+Create one more Transitgatewayattachements- Select VPC02-attach to transitgateway1
+Add the route in Route-table
+  from   10.0.0.0/16 to Transitgaatway-Select-connection
+
+Now try to ping
+ 
+ 
+
+
+
+
+
+
